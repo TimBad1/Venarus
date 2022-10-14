@@ -1,0 +1,109 @@
+.swiper.buy {
+	max-width: 100%;
+}
+
+.buy__wrap-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.swiper-slide__img.buy {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+	.information__wrap {
+		display: -ms-grid;
+		display: grid;
+	  	-ms-grid-columns: 1fr 20px 1fr;
+	  	grid-template-columns: 1fr 1fr;
+	  	-ms-grid-rows: 1fr 20px 1fr 20px 1fr;
+	  	grid-template-rows: 1fr 1fr 1fr;
+	  	gap: 20px;
+	  	    grid-template-areas: 
+		  	"first second"
+		  	"first third"
+		  	"fourth fourth"
+		  	;
+	}	
+
+	.information__card::after {
+		top: 15px;
+		left: 15px;
+		font-size: 20px;
+		width: 120px;
+	}
+
+	.link.information {
+		margin: 0 auto;
+	}
+
+    .buy__wrap-link {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .link.buy:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .link.buy {
+        padding: 5px 40px;
+    }
+
+    .link.buy:nth-child(1) {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    }
+
+    .link.buy:nth-child(2) {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }
+
+    .link.buy:nth-child(3) {
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .link.buy {
+        padding: 12px 40px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .buy__wrap-link {
+        max-width: 740px;
+        margin: 0 auto; 
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+    .link.buy {
+        padding: 18px 58px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .link.buy {
+        padding: 18px 93px;
+    }
+
+    .section.buy {
+        padding-bottom: 95px;
+    }
+}

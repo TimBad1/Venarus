@@ -1,0 +1,30 @@
+.expert.swiper-pagination .swiper-pagination-bullet {
+	width: 16px;
+	height: 16px;
+	margin: 8px 16px 8px 0px;
+  background-color: transparent;
+  border: 1px solid var(--color-47);
+}
+
+.expert.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-59);
+}
+
+.production-slide.expert {
+  min-width: 100%;
+  min-height: 100%;
+  
+}
+
+@media screen and (min-width: 1201px) {
+  .swiper-pagination.expert {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  padding: 20px 0;
+  }
+
+  .section.expert {
+	  padding-bottom: 116px;
+  }
+}

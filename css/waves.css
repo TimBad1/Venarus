@@ -1,0 +1,96 @@
+.waves-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.waves-wrap .waves:nth-child(2) {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.waves {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.wave1, .wave2{
+    position: absolute;
+    width: 5000px;
+    height: 5000px;
+}
+
+.wave1{
+    left: -1400px; /*определяем положение блока*/
+    top: 115px;
+    background-color: #590D56; /*окрашиваем блок*/
+    border-radius: 45%;  /*закругляем углы*/
+    -webkit-animation: wave 20s linear infinite;
+            animation: wave 20s linear infinite;  /*добавляем анимацию*/
+} 
+ .wave2{
+    left: -1400px; /*определяем положение блока*/
+    top: 115px;
+    background-color: #590D56;  /*окрашиваем блок*/
+    border-radius: 45%;  /*закругляем углы*/
+    -webkit-animation: wave 15s linear infinite;
+            animation: wave 15s linear infinite; /*добавляем анимацию*/
+}
+
+@-webkit-keyframes wave {
+    100% {
+       -webkit-transform: rotate(360deg);
+               transform: rotate(360deg);
+    }
+}
+
+@keyframes wave {
+    100% {
+       -webkit-transform: rotate(360deg);
+               transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wave1, .wave2{
+        position: absolute;
+        width: 3000px;
+        height: 3000px;
+    }
+    
+    .wave1{
+        left: -1000px; /*определяем положение блока*/
+        top: 115px;
+        background-color: #590D56; /*окрашиваем блок*/
+        border-radius: 45%;  /*закругляем углы*/
+        -webkit-animation: wave 20s linear infinite;
+                animation: wave 20s linear infinite;  /*добавляем анимацию*/
+    } 
+     .wave2{
+        left: -1000px; /*определяем положение блока*/
+        top: 115px;
+        background-color: #590D56;  /*окрашиваем блок*/
+        border-radius: 45%;  /*закругляем углы*/
+        -webkit-animation: wave 15s linear infinite;
+                animation: wave 15s linear infinite; /*добавляем анимацию*/
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    
+}
+
+
+@media screen and (min-width: 1201px) {
+    .waves {
+        width: 100vw;
+        left: calc((100vw - 100%) / -2);
+    }
+}

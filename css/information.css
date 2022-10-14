@@ -1,0 +1,218 @@
+.section.information {
+	position: relative;
+}
+
+.section__left.information {
+	mix-blend-mode: exclusion;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+
+.information__wrap {
+  	display: -ms-grid;
+  	display: grid;
+	-ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	-ms-grid-rows: 1fr 30px .5fr;
+	grid-template-rows: 1fr .5fr;
+	gap: 30px;
+	    grid-template-areas: 
+		"first second third"
+		"first fourth fourth"
+		;
+}
+
+.information__card.first {
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 3;
+	-ms-grid-column: 1;
+	grid-area: first;
+	background-image: url('../img/jpg/information/first-min.jpg');
+}
+
+.information__card.second {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+	grid-area: second;
+	background-image: url('../img/jpg/information/second-min.jpg');
+}
+
+.information__card.third {
+	-ms-grid-row: 1;
+	-ms-grid-column: 5;
+	grid-area: third;
+	background-image: url('../img/jpg/information/third-min.jpg');
+}
+
+.information__card.fourth {
+	-ms-grid-row: 3;
+	-ms-grid-column: 3;
+	-ms-grid-column-span: 3;
+	grid-area: fourth;
+	background-color: var(--color-47);
+}
+
+.information__card {
+	width: 100%;
+	background-size: cover;
+	padding-bottom: 47.5%;
+	position: relative;
+	-webkit-transition: -webkit-transform .2s linear;
+	transition: -webkit-transform .2s linear;
+	-o-transition: transform .2s linear;
+	transition: transform .2s linear;
+	transition: transform .2s linear, -webkit-transform .2s linear;
+}
+
+.information__card::after {
+	position: absolute;
+	-webkit-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
+	word-wrap: break-word;
+	color: #fff;
+	
+	font-weight: 300;
+	line-height: 1em;
+}
+
+.information__card.first::after {
+	content: 'Профилак-тические упражнения';
+}
+
+.information__card.second::after {
+	content: 'Диагностика и способы лечения';
+}
+
+.information__card.third::after {
+	content: 'Рекомен-дации по питанию';
+}
+
+.information__card.fourth::after {
+	content: 'Факты о варикозе';
+	max-width: 200px;
+}
+
+.information__card:hover,
+.information__card:focus,
+.information__card:active {
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-box-shadow: 0 0 20px gray;
+	        box-shadow: 0 0 20px gray;
+}
+
+.card__title {
+	color: var(--color-white);
+	font-size: 36px;
+	line-height: 1em;
+	font-weight: 300;
+	
+}
+
+.information__wrap {
+	margin-bottom: 40px;
+}
+
+.section__right.information {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.link.information {
+	margin-left: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+	.information__wrap {
+		display: -ms-grid;
+		display: grid;
+	  	-ms-grid-columns: 1fr 20px 1fr;
+	  	grid-template-columns: 1fr 1fr;
+	  	-ms-grid-rows: 1fr 20px 1fr 20px 1fr;
+	  	grid-template-rows: 1fr 1fr 1fr;
+	  	gap: 20px;
+	  	    grid-template-areas: 
+		  	"first second"
+		  	"first third"
+		  	"fourth fourth"
+		  	;
+	}	
+
+	.information__card::after {
+		top: 15px;
+		left: 15px;
+		font-size: 20px;
+		width: 120px;
+	}
+
+	.link.information {
+		margin: 0 auto;
+	}
+	.information__card.first {
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
+		-ms-grid-column: 1;
+	}
+	.information__card.second {
+		-ms-grid-row: 1;
+		-ms-grid-column: 3;
+	}
+	.information__card.third {
+		-ms-grid-row: 3;
+		-ms-grid-column: 3;
+	}
+	.information__card.fourth {
+		-ms-grid-row: 5;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 3;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	.information__card::after {
+		top: 15px;
+		left: 15px;
+		font-size: 20px;
+		width: 120px;
+	}
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+	.information__card::after {
+		top: 30px;
+		left: 20px;
+		font-size: 34px;
+		max-width: 210px;
+	}
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+	.information__card::after {
+		top: 30px;
+		left: 20px;
+		font-size: 27px;
+		max-width: 180px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.information__card::after {
+		top: 30px;
+		left: 20px;
+		font-size: 36px;
+		max-width: calc(100% - 20px);
+		width: 218px;
+	}
+
+	.section.information {
+		padding-bottom: 73px;
+	}
+}
