@@ -128,9 +128,9 @@
 	right: 0;
 	background-color: var(--color-white);
 	z-index: 11;
-	-webkit-transform: translateY(-100vw);
-	    -ms-transform: translateY(-100vw);
-	        transform: translateY(-100vw);
+	-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	        transform: translateY(-100%);
 	-webkit-transition: -webkit-transform .2s ease-in-out;
 	transition: -webkit-transform .2s ease-in-out;
 	-o-transition: transform .2s ease-in-out;
